@@ -1,0 +1,226 @@
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疫後觀光復甦之路：日韓越旅台十週年數據觀察</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Google Fonts: Noto Serif TC for main text, Noto Sans TC for UI -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        p, li {
+            font-family: 'Noto Serif TC', serif;
+            line-height: 1.8;
+            color: #2d3748;
+        }
+        .chart-container {
+            position: relative; 
+            height: 400px; 
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Navigation / Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="font-bold text-xl tracking-tight text-indigo-900">DATANEWS</div>
+            <div class="text-sm text-gray-500">2025年12月03日 專題報導</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-4 py-10">
+        
+        <!-- Article Header -->
+        <article class="mb-12">
+            <span class="text-indigo-600 font-bold tracking-wider text-sm uppercase">觀光產業分析</span>
+            <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4 leading-tight">
+                從高峰跌至谷底再反彈：<br>日韓越旅台十年數據揭示疫情衝擊與復甦
+            </h1>
+            <div class="flex items-center space-x-4 mb-8">
+                <div class="h-10 w-10 rounded-full bg-gray-300 flex items-center justify-center text-gray-500 font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-sm font-semibold text-gray-900 m-0" style="font-family: 'Noto Sans TC'">數據編輯部</p>
+                    <p class="text-xs text-gray-500 m-0" style="font-family: 'Noto Sans TC'">閱讀時間：約 3 分鐘</p>
+                </div>
+            </div>
+
+            <!-- Lead Paragraph -->
+            <p class="text-lg text-gray-600 mb-8 border-l-4 border-indigo-500 pl-4 italic">
+                根據最新出爐的 2015 至 2024 年觀光統計數據，台灣旅遊市場在經歷了 COVID-19 的毀滅性打擊後，正展現出強勁的復甦力道。日本、韓國與越南作為台灣重要的客源國，其十年間的旅客量變化，宛如一場驚心動魄的過山車，忠實記錄了全球公衛危機對跨境移動的深遠影響。
+            </p>
+
+            <!-- Chart Section -->
+            <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 mb-10">
+                <h3 class="text-lg font-bold mb-4 text-center">2015-2024 日韓越三國來台旅客人數趨勢</h3>
+                <div class="chart-container">
+                    <canvas id="tourismChart"></canvas>
+                </div>
+                <p class="text-xs text-center text-gray-400 mt-2">資料來源：歷年來台旅客統計</p>
+            </div>
+
+            <!-- Body Text -->
+            <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-900">黃金成長期的終結</h2>
+            <p class="mb-6">
+                回顧疫情爆發前（2015-2019），日、韓、越三國來台人數呈現穩健上升的「黃金曲線」。日本作為最大客源國，人數從 162 萬一路攀升至 2019 年的 216 萬高峰；韓國市場的爆發力更為驚人，短短五年間人數翻倍，由 65 萬成長至 124 萬；越南則受惠於新南向政策，從 14 萬大幅增長至 40 萬人次。這五年標誌著台灣觀光產業的繁榮盛世。
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-900">COVID-19：觀光業的冰河期</h2>
+            <p class="mb-6">
+                然而，2020 年 COVID-19 疫情席捲全球，各國邊境封鎖，數據呈現斷崖式崩跌。到了 2021 年，觀光業進入最黑暗的「冰河期」。昔日突破兩百萬大關的日本遊客，僅剩慘澹的 1 萬人次，跌幅超過 99%；韓國與越南亦僅剩數千至數萬人。這三年的數據幾乎歸零，重創了台灣的旅宿、餐飲與交通產業。
+            </p>
+
+            <h2 class="text-2xl font-bold mt-8 mb-4 text-gray-900">2023-2024：強力反彈與新格局</h2>
+            <p class="mb-6">
+                隨著 2022 年底邊境解封，2023 年迎來了報復性旅遊潮。從數據可見，2024 年日本遊客回升至 131 萬，韓國突破 100 萬，越南亦恢復至 37 萬的高水準。值得注意的是，韓國市場的恢復速度驚人，已逼近疫情前水準，展現出強大的市場韌性。
+            </p>
+            
+            <p class="mb-6">
+                這份十年數據不僅是數字的堆疊，更見證了觀光產業在面對不可抗力時的脆弱與強韌。展望未來，如何在後疫情時代重建國際旅客信心，並因應日韓越不同市場的旅遊偏好進行精準行銷，將是台灣觀光能否重返、甚至超越 2019 年高峰的關鍵。
+            </p>
+        </article>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 border-t border-gray-200 pt-8 mt-8">
+            <div class="p-4 bg-red-50 rounded text-center">
+                <span class="block text-red-800 text-sm font-bold uppercase">日本 (2024)</span>
+                <span class="block text-3xl font-bold text-red-600 mt-2">131.9萬</span>
+                <span class="text-xs text-red-500">持續回穩中</span>
+            </div>
+            <div class="p-4 bg-blue-50 rounded text-center">
+                <span class="block text-blue-800 text-sm font-bold uppercase">韓國 (2024)</span>
+                <span class="block text-3xl font-bold text-blue-600 mt-2">100.3萬</span>
+                <span class="text-xs text-blue-500">復甦力道強勁</span>
+            </div>
+            <div class="p-4 bg-green-50 rounded text-center">
+                <span class="block text-green-800 text-sm font-bold uppercase">越南 (2024)</span>
+                <span class="block text-3xl font-bold text-green-600 mt-2">37.0萬</span>
+                <span class="text-xs text-green-500">接近疫前高峰</span>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8 mt-12">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="text-sm text-gray-400">&copy; 2025 DataNews. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chart Logic -->
+    <script>
+        const ctx = document.getElementById('tourismChart').getContext('2d');
+        
+        // Data from user request
+        const chartData = {
+            labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+            datasets: [
+                {
+                    label: '日本 (Japan)',
+                    data: [1627229, 1895702, 1898854, 1969151, 2167952, 269659, 10056, 87616, 928235, 1319592],
+                    borderColor: 'rgb(239, 68, 68)', // Red-500
+                    backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                    tension: 0.3,
+                    borderWidth: 2,
+                    pointRadius: 3
+                },
+                {
+                    label: '韓國 (Korea)',
+                    data: [658757, 884397, 1054708, 1019441, 1242598, 178911, 3300, 51748, 744727, 1003086],
+                    borderColor: 'rgb(59, 130, 246)', // Blue-500
+                    backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                    tension: 0.3,
+                    borderWidth: 2,
+                    pointRadius: 3
+                },
+                {
+                    label: '越南 (Vietnam)',
+                    data: [146380, 196636, 383329, 490774, 405396, 110882, 24935, 134818, 382529, 370548],
+                    borderColor: 'rgb(16, 185, 129)', // Emerald-500
+                    backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                    tension: 0.3,
+                    borderWidth: 2,
+                    pointRadius: 3
+                }
+            ]
+        };
+
+        new Chart(ctx, {
+            type: 'line',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            font: {
+                                family: "'Noto Sans TC', sans-serif"
+                            }
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += new Intl.NumberFormat('zh-TW').format(context.parsed.y) + ' 人次';
+                                }
+                                return label;
+                            }
+                        },
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleFont: { family: "'Noto Sans TC', sans-serif" },
+                        bodyFont: { family: "'Noto Sans TC', sans-serif" }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.05)'
+                        },
+                        ticks: {
+                            font: { family: "'Noto Sans TC', sans-serif" },
+                            callback: function(value) {
+                                return value / 10000 + '萬';
+                            }
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: { family: "'Noto Sans TC', sans-serif" }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
